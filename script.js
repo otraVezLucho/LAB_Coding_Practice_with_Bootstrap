@@ -26,6 +26,7 @@ botonAgregar.addEventListener('click', () => {
         nuevoItem.appendChild(nuevoLabel);
         textInput.value = "";
     }
+    alert("Tarea agregada exitosamente!")
 });
 
 
