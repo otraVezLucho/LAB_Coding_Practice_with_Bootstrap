@@ -15,7 +15,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                     <img src="assets/checklistIcon.png" alt="Bootstrap" width="30" height="30">
+                    <img src="assets/checklistIcon.png" alt="Bootstrap" width="30" height="30">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="toDo.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="Inicio.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="tareas.html">Tareas</a>
@@ -32,7 +32,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Agregar</a>
                         </li>
-                        
+
                     </ul>
                 </div>
             </div>
@@ -41,19 +41,25 @@
     </header>
 
     <main>
-        <ul id="listaDeTareas">
-            <li>Estudiar HTML</li>
-            <Li>Estudiar JS</Li>
-            <li>Buscar las propiedades de css</li>
+        <ul class="list-group" id="manageDom">
+
         </ul>
         <form action="" id="formularioTarea">
-            <input type="text" name="tarea" id="tareaNueva" placeholder="Ingrese una tarea" required>
-            <button type="submit" id="agregar" class="miBoton">Agregar</button>
+            
+            <div class="input-group">
+                <textarea class="form-control" id="tareaNueva" aria-label="With textarea" placeholder="Ingrese una tarea" required></textarea>
+            </div>
+            <button type="submit" id="agregar" class="btn btn-outline-success agregarBoton">Agregar</button>
+            <button type="button" id="borrar" class="btn btn-outline-danger borrarBoton">Borrar Item</button>
+
+
         </form>
     </main>
+
     <footer>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
+                <a class="navbar-brand" href="#">Luis Villada</a>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" href="#">LinkedIn</a>
@@ -64,7 +70,7 @@
         </nav>
     </footer>
 
-    <script src="scri pt.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
