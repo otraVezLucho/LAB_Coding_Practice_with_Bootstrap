@@ -2,13 +2,13 @@ const textInput = document.getElementById("tareaNueva");
 const botonAgregar = document.getElementById("agregar");
 const botonBorrar = document.getElementById("borrar")
 const lista = document.getElementById("manageDom");
-let contador = 0; 
+let contador = 0;
 
 // Agregar elementos a la 
 botonAgregar.addEventListener('click', () => {
     const texto = textInput.value.trim();
-        console.log(texto);
-    if(texto){
+    console.log(texto);
+    if (texto) {
         contador++;
         const idName = contador + "CheckBox";
         const nuevoItem = document.createElement("li");
@@ -28,19 +28,19 @@ botonAgregar.addEventListener('click', () => {
     }
 });
 
+
 botonBorrar.addEventListener("click", () => {
-    const checkBoxes = lista.querySelectorAll("input[type='checkbox;']");
+
+    const checkbox = document.querySelectorAll('input[type="checkbox"]:checked'); /* devuelve un NodeList (aunque esté vacío). */
     
-    const marcados = Array.from(checkBoxes).filter(cb => cb.checked);
-    if(marcados.length === 0){
-        alert ("Por favor, selecciona al menos una tarea para borrar.");
-        return;
+    if (checkbox.length === 0 ){
+        alert("No hay elementos seleccionados");      
+    }else{
+        console.log(); 
+        for (let i = 0; i < checkbox.length; i++){
+            checkbox[i].closest('li').remove();
+            //console.log("Id de Elemento borrado: ",checkbox[i].value); 
+            
+        }
     }
-    if(confirm("Borrar  elementos seleccionados?")){
-        marcados.forEach(checkBox => {
-            const li = checkBox.closest("li");  
-            if (li) li.remove();    
-        });
-    }
-     
 });
